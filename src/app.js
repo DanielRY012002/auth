@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import userRoutes from './routers/user.routes';
 import productsRoutes from './routers/producto.routes';
+import matriculasRouters from './routers/matricula.routes';
 import authRoutes from './routers/auth.routes';
 const app=express();
 var cors=require('cors');
@@ -14,4 +15,5 @@ app.get('/',function(req,res,next){
 app.use('/api/auth',authRoutes);
 app.use('/api/auth/users',userRoutes);
 app.use('/api/auth/products',productsRoutes);
+app.use('/api/auth/matriculas',matriculasRouters);
 export default app;
