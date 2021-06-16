@@ -6,5 +6,5 @@ router.get('/',checkToken,userCtr.readAllUsers);
 router.get('/:id',checkToken,userCtr.readUser);
 router.delete('/:id',checkToken,userCtr.dellUser);
 router.post('/',userCtr.createUser);
-router.put('/:id',checkToken,userCtr.updateUser)
+router.put('/:id',checkToken,userCtr.updateUser);
 export default router;
